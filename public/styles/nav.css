@@ -17,10 +17,25 @@ nav > span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  padding-top: 2rem;
+  cursor: pointer;
 }
 .right-text p {
-  margin-bottom: 0;
+  margin: 0;
+  animation-name: vertical;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .right-text i {
   color: red;
+}
+@keyframes vertical {
+  from {
+    padding-bottom: 0;
+  }
+  to {
+    padding-bottom: 15px;
+  }
 }

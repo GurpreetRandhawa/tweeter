@@ -15,6 +15,9 @@ textarea {
   border: none;
   border-bottom: 3px solid black;
 }
+.new-tweet {
+  display: none;
+}
 .new-tweet-footer {
   margin-top: 1rem;
   display: flex;

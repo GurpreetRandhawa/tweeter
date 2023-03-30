@@ -66,4 +66,12 @@ $(document).ready(() => {
     });
   };
   loadTweets();
+
+  $(".right-text").click(() => {
+    if ($(".new-tweet").is(":hidden")) {
+      $(".new-tweet").slideDown("slow");
+    } else {
+      $(".new-tweet").slideUp();
+    }
+  });
 });
