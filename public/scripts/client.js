@@ -1,17 +1,16 @@
 $(document).ready(() => {
   const createTweetElement = function (tweet_obj) {
-    return $(`     <article>
+    return `     <article>
         <header>
           <div class="header-right">
             <img src=${tweet_obj.user.avatars} alt="user-avatar" />
             <p>${tweet_obj.user.name}</p>
           </div>
-
           <p>${tweet_obj.user.handle}</p>
         </header>
-        <h4>
+        <p>
           ${escape(tweet_obj.content.text)}
-        </h4>
+        </p>
         <footer>
           <p class="footer-left">${timeago.format(tweet_obj.created_at)}</p>
           <div class="footer-right">
@@ -20,7 +19,7 @@ $(document).ready(() => {
             <i class="fa-solid fa-heart"></i>
           </div>
         </footer>
-      </article>`);
+      </article>`;
   };
   const renderTweets = function (user_data) {
     $("#tweets-container").empty();
@@ -36,11 +35,15 @@ $(document).ready(() => {
 
   $("#tweet-form").submit((event) => {
     event.preventDefault();
-
+    $(".error-container").hide();
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
-      window.alert("The tweet is empty.");
+      $(".error-container").slideDown("slow");
+      $(".error-container").addClass("error-container-flex");
+      $(".error-container").children("p").text("Tweet is empty");
     } else if ($("#tweet-text").val().length > 140) {
-      window.alert("Tweet length is more than 140");
+      $(".error-container").slideDown("slow");
+      $(".error-container").addClass("error-container-flex");
+      $(".error-container").children("p").text("Tweet length is more than 140");
     } else {
       $.ajax({
         type: "POST",

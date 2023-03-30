@@ -4,9 +4,10 @@ $(document).ready(function () {
       .siblings("div")
       .children("output")
       .text(140 - $(this).val().length);
-    7;
     if (140 - $(this).val().length < 0) {
       $("output").addClass("counter-red");
+    } else {
+      $("output").removeClass("counter-red");
     }
   });
 });
