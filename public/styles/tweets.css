@@ -3,6 +3,7 @@ article {
   padding: 1rem;
   border: 3px solid black;
   margin-bottom: 1rem;
+  overflow-wrap: break-word;
 }
 article:hover {
   box-shadow: 6px 6px 1px #a0b2ed;

@@ -24,7 +24,7 @@ $(document).ready(() => {
   const renderTweets = function (user_data) {
     $("#tweets-container").empty();
     user_data.map((user) => {
-      $("#tweets-container").append(createTweetElement(user));
+      $("#tweets-container").prepend(createTweetElement(user));
     });
   };
   const escape = function (str) {
@@ -35,6 +35,7 @@ $(document).ready(() => {
 
   $("#tweet-form").submit((event) => {
     event.preventDefault();
+    $(".error-container").removeClass("error-container-flex");
     $(".error-container").hide();
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null) {
       $(".error-container").slideDown("slow");
@@ -51,6 +52,7 @@ $(document).ready(() => {
         data: $("#tweet-form").serialize(),
         success: () => {
           $("#tweet-form")[0].reset();
+          $(".counter").text(140);
           loadTweets();
         },
       });
@@ -71,6 +73,10 @@ $(document).ready(() => {
     if ($(".new-tweet").is(":hidden")) {
       $(".new-tweet").slideDown("slow");
     } else {
+      $("#tweet-form")[0].reset();
+      $(".counter").text(140);
+      $(".error-container").removeClass("error-container-flex");
+      $(".error-container").hide();
       $(".new-tweet").slideUp();
     }
   });

@@ -35,7 +35,7 @@ textarea {
   display: none;
 }
 .error-container-flex {
-  display: flex;
+  display: flex !important;
   justify-content: space-around;
 }
 .error-container i {
