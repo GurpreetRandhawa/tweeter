@@ -10,6 +10,9 @@ nav {
   align-items: center;
   position: fixed;
 }
+.nav-transparent {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 nav > span {
   font-family: "Bungee", sans-serif;
 }

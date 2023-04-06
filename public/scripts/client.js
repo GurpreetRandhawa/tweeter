@@ -100,9 +100,13 @@ $(document).ready(() => {
   //Event listener for scrolling the winow
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
+      $("nav").addClass("nav-transparent");
+      $(".right-text").hide();
       $("#button-scroll").addClass("button-scroll-flex");
       $("#button-scroll").fadeIn();
     } else {
+      $(".right-text").slideDown();
+      $("nav").removeClass("nav-transparent");
       $("#button-scroll").removeClass("button-scroll-flex");
       $("#button-scroll").fadeOut();
     }
