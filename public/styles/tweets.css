@@ -38,6 +38,9 @@ i {
 i:hover {
   color: #d4af48;
 }
+/* 
+Media Query for desktop */
+
 @media screen and (min-width: 1024px) {
   .container {
     padding-top: 120px;

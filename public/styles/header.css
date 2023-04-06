@@ -10,6 +10,9 @@
   box-sizing: content-box;
   padding-top: 120px;
 }
+/* 
+Media Query for desktop */
+
 @media screen and (min-width: 1024px) {
   #nav-header {
     margin-top: 167px;

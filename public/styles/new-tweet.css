@@ -46,6 +46,8 @@ textarea {
   color: red;
   font-weight: bold;
 }
+/* 
+Media Query for desktop */
 @media screen and (min-width: 1024px) {
   .container {
     padding-top: 120px;
