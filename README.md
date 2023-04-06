@@ -22,14 +22,18 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-### Enter URL that is to be shortened
+### Tweeter Homepage
 
-!["Enter URL that is to be shortened"](https://github.com/GurpreetRandhawa/tinyapp/blob/main/docs/urlNew.png?raw=true)
+!["Homepage"](https://github.com/GurpreetRandhawa/tweeter/blob/master/docs/home_page.png?raw=true)
 
-### List of URLs that a user has shortened
+### Add a new tweet
 
-!["List of URLs that a user has shortened"](https://github.com/GurpreetRandhawa/tinyapp/blob/main/docs/urlIndex.png?raw=true)
+!["Add a new tweet"](https://github.com/GurpreetRandhawa/tweeter/blob/master/docs/new_tweet.png?raw=true)
 
-### Short URL and option to edit the URL
+### Counter shows tweet exceeds length of 140
 
-!["Short URL and option to edit the URL"](https://github.com/GurpreetRandhawa/tinyapp/blob/main/docs/urlShow.png?raw=true)
+!["Counter shows tweet exceeds length of 140"](https://github.com/GurpreetRandhawa/tweeter/blob/master/docs/tweet_error.png?raw=true)
+
+### Error when tweet exceeds length of 140
+
+!["Error when tweet exceeds length of 140"](https://github.com/GurpreetRandhawa/tweeter/blob/master/docs/tweet-error-container.png?raw=true)
