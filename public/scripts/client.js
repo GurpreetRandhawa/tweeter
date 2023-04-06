@@ -43,7 +43,7 @@ $(document).ready(() => {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  //Event handler for form submission
+  //Event listener for form submission
   $("#tweet-form").submit((event) => {
     event.preventDefault();
     $(".error-container").removeClass("error-container-flex");
@@ -85,7 +85,7 @@ $(document).ready(() => {
     });
   };
   loadTweets();
-  //Event handler for clicking "Write a new tweet" nav item
+  //Event listener for clicking "Write a new tweet" nav item
   $(".right-text").click(() => {
     if ($(".new-tweet").is(":hidden")) {
       $(".new-tweet").slideDown("slow");
@@ -96,5 +96,25 @@ $(document).ready(() => {
       $(".error-container").hide();
       $(".new-tweet").slideUp();
     }
+  });
+  //Event listener for scrolling the winow
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 200) {
+      $("#button-scroll").addClass("button-scroll-flex");
+      $("#button-scroll").fadeIn();
+    } else {
+      $("#button-scroll").removeClass("button-scroll-flex");
+      $("#button-scroll").fadeOut();
+    }
+  });
+  $("#button-scroll").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      600
+    );
+    $(".new-tweet").slideDown("slow");
+    return false;
   });
 });
