@@ -38,3 +38,8 @@ i {
 i:hover {
   color: #d4af48;
 }
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-top: 120px;
+  }
+}

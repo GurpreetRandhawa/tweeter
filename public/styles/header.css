@@ -1,4 +1,4 @@
-body > header {
+#nav-header {
   height: 400px;
   width: 100vw;
   background-color: #d4af48;
@@ -9,4 +9,12 @@ body > header {
   align-items: center;
   box-sizing: content-box;
   padding-top: 120px;
+}
+@media screen and (min-width: 1024px) {
+  #nav-header {
+    margin-top: 167px;
+    margin-right: 100px;
+    height: 200px;
+    width: 50%;
+  }
 }
